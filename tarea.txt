@@ -1,0 +1,76 @@
+Tarea 
+Deben Existir 4 documentos .js enlazados al index.html
+component.js
+clock.js
+greet.js
+app.js
+
+los cuales deben de contener
+component.js:
+-Toda la dinámica de los metodos 
+    render
+    mount 
+    init
+recibirá como parametro un objeto 
+    {
+        selector: '',
+        template: '',
+        data: {},
+        methods: {}
+    }
+cada uno de las propiedades tendrá las caracteristicas que describimos en clase 
+clock.js 
+-Heredará todas las caracteristicasde component y se asignará los siguientes datos 
+{
+            selector: '[data-component="clock"]',
+            template: `
+                    <article class="reloj">
+                        <section class="display">
+                            <span class="hours" data-value="hours"></span>
+                            <span class="minutes" data-value="minutes"></span>
+                            <span class="seconds" data-value="seconds"></span>
+                        </section>
+                        <section class="controls">
+                            <button data-event-click="startClock">Start</button>
+                            <button data-event-click="pauseClock">Pause</button>
+                            <button data-event-click="stopClock">Stop</button>
+                        </section>
+                    </article>`,
+            data: {
+                seconds: 0,
+                minutes: 0,
+                hours: 0
+            },
+            methods: {
+                updateClock() {
+                    ...
+                },
+                startClock() {
+                    ...
+                },
+                pauseClock() {
+                ...
+                },
+                stopClock() {
+                   ... 
+                }
+            }
+
+greet.js
+{
+            selector: '[data-component="greet"]',
+            template: `
+            <article>
+      <label>Name:</label>
+      <input type="text" data-value="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello <span data-value="yourName"></span>!</h1>
+    </article>`,
+            data: {
+                yourName: '',                
+            },
+            methods: {                
+            }
+    }
+app.js
+se inicializaran los componentes.
