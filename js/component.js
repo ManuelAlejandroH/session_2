@@ -15,7 +15,7 @@ class Component {
         } catch (e) {
             console.log(e)
         }
-    }
+    } 
     buildData(data = {}) {
         var computedInitalData = {}
         this._data = data;

@@ -15,7 +15,7 @@ recibirá como parametro un objeto
     {
         selector: '',
         template: '',
-        data: {},
+        data: {}, 
         methods: {}
     }
 cada uno de las propiedades tendrá las caracteristicas que describimos en clase 

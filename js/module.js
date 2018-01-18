@@ -5,4 +5,4 @@ class Module {
     }) {
     var container=document.querySelector(structure.selector);
     }
-}
+} 
